@@ -43,26 +43,9 @@ function startServer() {
       const variables = {}
       response.render('index', variables)
    })
-   app.listen(portNumber)
-   console.log(`Web server is running at http://localhost:${portNumber}`)
-
-   // Start Interpreter
-   process.stdin.setEncoding('utf8')
-   process.stdout.write(prompt)
-   process.stdin.on('readable', () => {
-      let dataInput = process.stdin.read()
-      if (dataInput !== null) {
-         let command = dataInput.trim()
-         if (command === 'stop') {
-            process.stdout.write(exitMsg)
-            process.exit(0)
-         } else {
-            console.log(`Invalid command: ${command}`)
-         }
-         process.stdout.write(prompt)
-         process.stdin.resume()
-      }
-   })
+   app.listen(portNumber, () =>
+      console.log(`Web server is running at http://localhost:${portNumber}`)
+   )
 }
 
 startServer()
