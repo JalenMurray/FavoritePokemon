@@ -1,0 +1,19 @@
+{
+  "name": "favoritepokemon",
+  "version": "1.0.0",
+  "description": "This is an app that uses the PokeApi to gather info on a users favorite pokemon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node favoritePokemon.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JalenMurray/FavoritePokemon.git"
+  },
+  "author": "Jalen Murray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JalenMurray/FavoritePokemon/issues"
+  },
+  "homepage": "https://github.com/JalenMurray/FavoritePokemon#readme"
+}
